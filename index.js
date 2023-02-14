@@ -10,7 +10,7 @@ app.use(express.urlencoded());
 app.use(cors({}));
 
 mongoose.connect(
-  "mongodb+srv://admin:MTY17ZehCeq6MUxY@cluster0.oyys1ne.mongodb.net/login_register?retryWrites=true&w=majority",
+  `mongodb+srv://${process.env.MONGO_USER_NAME}:${process.env.MONGO_USER_PASSWORD}@cluster0.oyys1ne.mongodb.net/login_register?retryWrites=true&w=majority`,
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
